@@ -54,9 +54,6 @@ console.log(data)
         if (checkunique) return res.status(400).send({ status: false, msg: "This email Already Exists Pls Use Another" })
 
       
-      
-
-
         let checkuniquemobile = await InternModel.findOne({ mobile: data.mobile })
         if (checkuniquemobile) return res.status(400).send({ status: false, msg: "This mobile Already Exists Pls Use Another" })
         
@@ -124,5 +121,3 @@ const getCollegeInternDetails = async function (req, res) {
 
 module.exports.createIntern = createIntern
 module.exports.getCollegeInternDetails = getCollegeInternDetails
-
-//Done
